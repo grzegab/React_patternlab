@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+import './patternlab/global.scss';
+import Navigation from './patternlab/2-molecules/0-navbar/index';
+
+import Nucleus from './patternlab/0-nucleus/index';
+import Atoms from './patternlab/1-atoms/index';
+
+const mainPage = () => {
+  return (
+      <div>Some descrption of this page and how it is organized.</div>
+  );
+};
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <Router>
+          <div>
+            <Navigation/>
+            <Route exact path="/" component={mainPage}/>
+            <Route path="/nucleus" component={Nucleus}/>
+            <Route path="/atoms" component={Atoms}/>
+            <Route path="/molecules" component={Nucleus}/>
+            <Route path="/organisms" component={Nucleus}/>
+            <Route path="/creatures" component={Nucleus}/>
+            <Route path="/page-1" component={Nucleus}/>
+            <Route path="/page-2" component={Nucleus}/>
+          </div>
+        </Router>
     );
   }
 }

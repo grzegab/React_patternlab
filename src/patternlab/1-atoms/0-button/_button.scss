@@ -1,0 +1,25 @@
+.button {
+  padding: 10px 40px;
+  @include font('Work Sans');
+  border-radius: 2px;
+
+  &-blue {
+    background-color: $blue;
+    color: $green-1;
+    line-height: 24px;
+  }
+
+  &-green {
+    background-color: $green-2;
+    color: $black;
+    font-size: 0.9em;
+    line-height: 16px;
+  }
+
+  &-simple {
+    background: $black;
+    color: $green-2;
+    font-size: 1.15em;
+    line-height: 1.2em;
+  }
+}

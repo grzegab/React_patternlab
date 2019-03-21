@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Sniglet|Work+Sans:300');
+
+$montserrat: 'Montserrat', sans-serif;
+$workSans: 'Work Sans', sans-serif;
+$sniglet: 'Sniglet', cursive;
+
+@mixin font($fontface: 'Montserrat') {
+  font-family: $fontface;
+}
+
+.font-example {
+  border: 1px solid black;
+  padding: 30px 10px;
+
+  &-monserrat {
+    @include font($montserrat);
+  }
+  &-work-sans {
+    @include font($workSans);
+  }
+  &-sniglet {
+    @include font($sniglet);
+  }
+}

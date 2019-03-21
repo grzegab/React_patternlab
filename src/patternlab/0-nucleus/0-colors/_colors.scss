@@ -1,0 +1,45 @@
+$green-1: #7CFF4F !default;
+$green-2: #22FFC0 !default;
+$white: #FFFFFF !default;
+$black: #000000 !default;
+$blue: #1876FF !default;
+$red: #F01E16 !default;
+
+@mixin background($color: $white) {
+  background-color: $color;
+}
+
+.color-example {
+  margin-bottom: 20px;
+  height: 150px;
+  width: 100%;
+
+  &-green-1 {
+    @include background($green-1)
+  }
+
+  &-green-2 {
+    @include background($green-2)
+  }
+
+  &-blue {
+    @include background($blue)
+  }
+
+  &-red {
+    @include background($red)
+  }
+
+  &-white {
+    @include background($white)
+  }
+
+  &-black {
+    @include background($black)
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+  }
+}

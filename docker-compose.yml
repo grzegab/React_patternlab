@@ -1,0 +1,50 @@
+version: "3.5"
+
+networks:
+  proxy:
+    external: true
+  default:
+    driver: bridge
+
+services:
+  #for node commands use this examples:
+  #docker container run -v "$PWD":/usr/src/app -w /usr/src/app node:11.10-stretch npm install
+  #docker container run -it -v "$PWD":/usr/src/app -w /usr/src/app node:11.10-stretch npm run build --mode=development
+
+# For production purposes.
+  pl_service:
+    image: node:11.10-stretch
+    container_name: pl_node
+    command: "npm start"
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - 80:3000
+    expose:
+      - 3000
+    working_dir: '/usr/src/app'
+    environment:
+      - NODE_ENV=dev
+      - PATH=/usr/src/app/node_modules/.bin:$PATH
+    labels:
+      - "traefik.frontend.rule=Host:patternlab.traefik.localhost"
+      - "traefik.docker.network=proxy"
+    networks:
+      - proxy
+      - default
+
+# Production server.
+  nginx_server:
+    image: nginx:latest
+    container_name: pl_nginx
+    volumes:
+      - './build:/usr/share/nginx/html'
+    expose:
+      - 80
+    command: ['nginx', '-g', 'daemon off;']
+    labels:
+      - "traefik.frontend.rule=Host:patternlab.traefik.localhost"
+      - "traefik.docker.network=proxy"
+    networks:
+      - proxy
+      - default
