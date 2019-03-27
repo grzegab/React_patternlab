@@ -1,15 +1,16 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import React, {Component} from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 
-import './patternlab/global.scss';
-import Navigation from './patternlab/1-atoms/01-navbar/index';
+import './patternlab/global.scss'
+import Navigation from './patternlab/1-atoms/01-navbar/index'
 
-import Nucleus from './patternlab/0-nucleus/index';
-import Atoms from './patternlab/1-atoms/index';
+import Nucleus from './patternlab/0-nucleus/index'
+import Atoms from './patternlab/1-atoms/index'
+import Molecules from './patternlab/2-molecules/index'
 
 const mainPage = () => {
     return (
@@ -55,7 +56,7 @@ class App extends Component {
                     <Route exact path="/" component={mainPage}/>
                     <Route path="/nucleus" component={Nucleus}/>
                     <Route path="/atoms" component={Atoms}/>
-                    <Route path="/molecules" component={Nucleus}/>
+                    <Route path="/molecules" component={Molecules}/>
                     <Route path="/organisms" component={Nucleus}/>
                     <Route path="/creatures" component={Nucleus}/>
                     <Route path="/page-1" component={Nucleus}/>
