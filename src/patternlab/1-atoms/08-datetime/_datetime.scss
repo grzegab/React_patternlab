@@ -1,0 +1,5 @@
+span.datetime {
+  color: $grey;
+  font-size: 0.9em;
+  @include font('work-sans');
+}

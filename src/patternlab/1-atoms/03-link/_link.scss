@@ -1,0 +1,8 @@
+a.link {
+  color: $green-1;
+  background-color: $black;
+
+  &:hover {
+    color: $green-2;
+  }
+}

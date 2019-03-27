@@ -42,6 +42,9 @@ export default class Nucleus extends React.Component {
                     <Col>
                         <Color colorName={"black"} />
                     </Col>
+                    <Col>
+                        <Color colorName={"grey"} />
+                    </Col>
                 </Row>
                 <Row>
                     <Col className={'pt-100'}>

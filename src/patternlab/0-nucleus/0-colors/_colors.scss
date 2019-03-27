@@ -1,7 +1,8 @@
 $green-1: #7CFF4F !default;
 $green-2: #22FFC0 !default;
 $white: #FFFFFF !default;
-$black: #000000 !default;
+$black: #222222 !default;
+$grey: #777777 !default;
 $blue: #1876FF !default;
 $red: #F01E16 !default;
 
@@ -36,6 +37,10 @@ $red: #F01E16 !default;
 
   &-black {
     @include background($black)
+  }
+
+  &-grey {
+    @include background($grey)
   }
 
   span {

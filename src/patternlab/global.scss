@@ -1,17 +1,14 @@
-// Nucleus.
-@import './0-nucleus/0-colors/colors';
-@import './0-nucleus/1-fonts/fonts';
+/* Import groups */
+@import './0-nucleus/nucleus';
+@import './1-atoms/atoms';
 
-// Atoms.
-@import './1-atoms/0-button/button';
-
-// Basic site settings.
+/* Basic site settings. */
 
 body {
   font-size: 16px;
 }
 
-// Other helpers.
+/* Other helpers. */
 
 .pt-100 {
   padding-top: 100px;

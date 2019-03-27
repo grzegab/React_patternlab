@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Button extends React.Component {
+export default class ButtonAtom extends React.Component {
     render() {
         return (
             <button className={`button button-${this.props.buttonType}`}>
