@@ -16,6 +16,7 @@ import InputAtom from "./09-input";
 import CardAtom from "./10-card";
 import CiteAtom from "./11-cite";
 import LabelAtom from './12-label';
+import BadgeAtom from "./13-badge";
 
 export default class Atoms extends React.Component {
     render() {
@@ -172,6 +173,23 @@ export default class Atoms extends React.Component {
                 <Row>
                     <Col>
                         <LabelAtom>Label text</LabelAtom>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className={'pt-100'}>
+                        badge:
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <BadgeAtom variant="primary">Primary</BadgeAtom>
+                        <BadgeAtom variant="secondary">Secondary</BadgeAtom>
+                        <BadgeAtom variant="success">Success</BadgeAtom>
+                        <BadgeAtom variant="danger">Danger</BadgeAtom>
+                        <BadgeAtom variant="warning">Warning</BadgeAtom>
+                        <BadgeAtom variant="info">Info</BadgeAtom>
+                        <BadgeAtom variant="light">Light</BadgeAtom>
+                        <BadgeAtom variant="dark">Dark</BadgeAtom>
                     </Col>
                 </Row>
             </Container>

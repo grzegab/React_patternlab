@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Font extends React.Component {
+export default class FontNucleus extends React.Component {
 
     render() {
         return (

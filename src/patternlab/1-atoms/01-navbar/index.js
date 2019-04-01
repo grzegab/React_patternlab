@@ -15,7 +15,7 @@ export default class Navigation extends React.Component {
                         <Nav.Link href="/atoms">Atoms</Nav.Link>
                         <Nav.Link href="/molecules">Molecules</Nav.Link>
                         <Nav.Link href="/organisms">Organisms</Nav.Link>
-                        <Nav.Link href="/page-1">Page 1</Nav.Link>
+                        <Nav.Link href="/page">Page 1</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
